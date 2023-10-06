@@ -35,7 +35,7 @@ jobs:
         id: get_version
         run: |
           new_version=$(jq -r '.image_version' ./version.json)
-          echo "$new_version" >> $GITHUB_OUTPUT
+          echo "version=$new_version" >> $GITHUB_OUTPUT
 
       - name: Build the new Docker image
         run: |
